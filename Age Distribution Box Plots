@@ -1,0 +1,13 @@
+#install tidyverse and ggplot2 packages
+
+install.packages('tidyverse')
+library(tidyverse)
+
+install.packages('ggplot2')
+library(ggplot2)
+
+#Create Data Viz
+ggplot(data=Cyclistic_2019_Divvy_Trips_2019_Q1) + geom_boxplot(mapping=aes(x=age)) + facet_wrap(~usertype) +labs(title = "Age Distribution of Cyclistic Rideshare Customers", subtitle = "Data from Q1 2019")
+
+#Save Image File
+ggsave("Cyclistic Age Distribution Without Outliers.png")
