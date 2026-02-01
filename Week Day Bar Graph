@@ -1,0 +1,6 @@
+#Create bar graph with bar labels at a 45 degree angle
+
+ggplot(data=Cyclistic_2019_Divvy_Trips_2019_Q1) + geom_bar(mapping=aes(x=week_day, fill = usertype)) + facet_wrap(~usertype) + theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) + labs(title = "Cyclistice Rideshare Trip Count by Day of the Week", subtitle = "Q1 2019")
+
+#Save Graph
+ggsave("Cyclistic Rideshare Trip Count by Day of the Week.png")
