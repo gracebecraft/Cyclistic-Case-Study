@@ -2,5 +2,7 @@
 
 ggplot(data=Cyclistic_2019_Divvy_Trips_2019_Q1) + geom_bar(mapping=aes(x=week_day, fill = usertype)) + facet_wrap(~usertype) + theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) + labs(title = "Cyclistice Rideshare Trip Count by Day of the Week", subtitle = "Q1 2019")
 
+ggplot(data=Cyclistic_2020_Divvy_Trips_2020_Q1) + geom_bar(mapping=aes(x=week_day, fill = user_type)) + facet_wrap(~user_type) + theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) + labs(title = "Cyclistic Rideshare Trip Count by Day of the Week", subtitle = "Q1 2020")
+
 #Save Graph
 ggsave("Cyclistic Rideshare Trip Count by Day of the Week.png")
